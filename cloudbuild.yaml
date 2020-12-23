@@ -3,14 +3,8 @@ steps:
     entrypoint: 'mvn'
     args: ['clean', 'install', 'package', '-DskipTests']
     
-  #- name: 'gcr.io/cloud-builders/docker'
-  #args: [ 'build', '-t', 'gcr.io/helloworld-java-docker/helloworldwebapp', '.' ]
-  
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/helloworld-java-docker/helloworldwebapp', '.']
-  images: ['gcr.io/helloworld-java-docker/helloworldwebapp']
   
-  #- name: 'gcr.io/cloud-builders/docker'
-  #  args: ['build', '-t', 'gcr.io/helloworld-java-docker/helloworldwebapp', '.']
-  #- name: 'gcr.io/cloud-builders/docker'
-  #  args: ['push', 'gcr.io/helloworld-java-docker/helloworldwebapp']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/helloworld-java-docker/helloworldwebapp']
