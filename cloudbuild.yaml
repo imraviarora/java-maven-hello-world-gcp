@@ -3,6 +3,6 @@ steps:
     entrypoint: 'mvn'
     args: ['clean', 'install', 'package', '-DskipTests']
     
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'Building and pushing docker image'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/helloworld', '.']
-    images: ['gcr.io/$PROJECT_ID/helloworld']
+  images: ['gcr.io/$PROJECT_ID/helloworld']
