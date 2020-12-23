@@ -11,6 +11,6 @@ MAINTAINER "Ravi Arora"
 #used in release pipeline ---------------------------------
 
 #used in simple pipeline ---------------------------------
-#WORKDIR /home/vsts/work/1/a 
-COPY /workspace/webapp/target/webapp.war /usr/local/tomcat/webapps
+WORKDIR /workspace
+COPY webapp/target/webapp.war /usr/local/tomcat/webapps
 #used in simple pipeline ---------------------------------
