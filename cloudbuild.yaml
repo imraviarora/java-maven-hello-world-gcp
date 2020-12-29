@@ -12,7 +12,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=kubernetes-resource-file
+  - --filename=k8s/
   - --image=gcr.io/$PROJECT_ID/helloworld:latest
   - --location=asia-east1-a
   - --cluster=anthos-sample-cluster1
