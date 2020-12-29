@@ -14,3 +14,5 @@ MAINTAINER "Ravi Arora"
 WORKDIR /workspace
 COPY webapp/target/webapp.war /usr/local/tomcat/webapps
 #used in simple pipeline ---------------------------------
+
+EXPOSE 8080
